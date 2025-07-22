@@ -24,9 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: EdgeInsets.all(20.0),
               child: TextField(
-                keyboardType: TextInputType.values[
-                  DateTime.daysPerWeek
-                ],
+                keyboardType: TextInputType.values[DateTime.daysPerWeek],
                 controller: password,
                 //autofocus: true,
                 obscureText: obscureText,
@@ -69,7 +67,6 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               spacing: 20.0,
               children: [
-                
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green,
@@ -85,15 +82,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 IconButton(
                   onPressed: () {
                     password.clear();
+                    debugPrint("All Cleared");
                   },
                   style: IconButton.styleFrom(
                     backgroundColor: Colors.green,
                     foregroundColor: Colors.white,
-                    side: BorderSide(
-                      color: Colors.red,
-                      width: 3.0,
-                    ),
-                    elevation: 5.0
+                    side: BorderSide(color: Colors.red, width: 3.0),
+                    elevation: 5.0,
                   ),
                   icon: Icon(Icons.clear),
                 ),

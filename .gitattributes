@@ -1,0 +1,14 @@
+# Dart files
+lib/** linguist-language=Dart
+
+# C++ files
+native/cpp/** linguist-language=C++
+
+# Objective-C files
+ios/Classes/** linguist-language=Objective-C
+
+# YAML config files — let GitHub detect automatically
+*.yaml linguist-detectable=true
+
+# Optional: don't ignore android/ios completely
+# but don't treat as vendored (so Dart remains dominant)
