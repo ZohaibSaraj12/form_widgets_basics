@@ -1,13 +1,13 @@
-# Mark Dart code
+# Mark Dart files
 lib/** linguist-language=Dart
 
-# Mark C++ code (you must have cpp files in this folder)
+# Mark C++ files (ensure these folders/files exist)
 native/cpp/** linguist-language=C++
 
-# Mark Objective-C code
+# Mark Objective-C
 ios/Classes/** linguist-language=Objective-C
 
-# Allow YAML & JSON config to count
+# Let config files count
 *.yaml linguist-detectable=true
 *.json linguist-detectable=true
 *.xml linguist-detectable=true
