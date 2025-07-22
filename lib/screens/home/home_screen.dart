@@ -10,9 +10,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   bool obscureText = false;
   bool c = false;
-
   Icon icon1 = Icon(Icons.visibility_off_outlined);
   Icon icon2 = Icon(Icons.visibility_outlined);
+  TextEditingController password = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,13 +24,16 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: EdgeInsets.all(20.0),
               child: TextField(
-                
+                keyboardType: TextInputType.values[
+                  DateTime.daysPerWeek
+                ],
+                controller: password,
                 //autofocus: true,
                 obscureText: obscureText,
                 // obscuringCharacter: "*",
                 cursorColor: Colors.black,
                 cursorOpacityAnimates: true,
-                maxLength: 5,
+                maxLength: 10,
                 textDirection: TextDirection.ltr,
                 decoration: InputDecoration(
                   border: InputBorder.none,
@@ -41,7 +44,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         obscureText = !obscureText;
                         c = !c;
                       });
-                      
                     },
                     icon: c == true ? icon2 : icon1,
                   ),
@@ -61,6 +63,41 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
+            ),
+            //ElevatedButton(onPressed: onPressed, child: child)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 20.0,
+              children: [
+                
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    foregroundColor: Colors.white,
+                    elevation: 5.0,
+                    side: BorderSide(color: Colors.deepOrange, width: 3.0),
+                  ),
+                  onPressed: () {
+                    debugPrint(password.text.toString());
+                  },
+                  child: Text("Login"),
+                ),
+                IconButton(
+                  onPressed: () {
+                    password.clear();
+                  },
+                  style: IconButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    foregroundColor: Colors.white,
+                    side: BorderSide(
+                      color: Colors.red,
+                      width: 3.0,
+                    ),
+                    elevation: 5.0
+                  ),
+                  icon: Icon(Icons.clear),
+                ),
+              ],
             ),
           ],
         ),
