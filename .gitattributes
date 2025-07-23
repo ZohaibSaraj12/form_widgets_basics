@@ -21,7 +21,7 @@ test/** linguist-language=Dart
 
 
 # Include C++
-
+windows/runner linguist-language=C++
 *.h linguist-language=C++
 
 
