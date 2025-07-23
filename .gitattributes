@@ -8,6 +8,7 @@ build/** linguist-detectable=false
 lib/** linguist-language=Dart
 test/** linguist-language=Dart
 *.dart linguist-language=Dart
+*.yaml linguist-language=Dart
 
 # Optionally include CMake, Swift, HTML only if needed:
 windows/runner/CMakeLists.txt linguist-language=CMake
